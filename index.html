@@ -11,8 +11,11 @@
 <style>html,body{margin:0;height:100%;background:#fff;overflow:hidden}
 #w{position:fixed;inset:0;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:14px;font-family:Tahoma,Arial,sans-serif;color:#555;font-size:15px;text-align:center;padding:20px}
 #w img{width:84px;height:84px;border-radius:20px}#w a{color:#1E6B5C;font-weight:bold}
-iframe{position:fixed;top:env(safe-area-inset-top,0);left:0;right:0;bottom:0;width:100%;height:calc(100% - env(safe-area-inset-top,0px));border:0;background:transparent}</style></head>
-<body><div id="w"><img src="icon-192.png" alt=""><div>جارٍ فتح نظام إدارة التدريب…</div><a href="https://script.google.com/macros/s/AKfycbwX4qcnvTu-56dogF3m4VRhRp6UoXhlkgD5Wibrhd3P2wXGH0J2FTZ2rqGlUrcgCI2c/exec" target="_top">إن لم يفتح النظام خلال دقيقة اضغط هنا</a></div>
+iframe{position:fixed;top:max(env(titlebar-area-height,0px),env(safe-area-inset-top,0px));left:0;right:0;bottom:0;width:100%;height:calc(100% - max(env(titlebar-area-height,0px),env(safe-area-inset-top,0px)));border:0;background:transparent}
+#tb{display:none;position:fixed;left:env(titlebar-area-x,0);top:env(titlebar-area-y,0);width:env(titlebar-area-width,100%);height:env(titlebar-area-height,0px);align-items:center;gap:8px;padding:0 12px;box-sizing:border-box;background:#fff;color:#1C2B2A;font:bold 13px Tahoma,Arial,sans-serif;-webkit-app-region:drag;app-region:drag;border-bottom:1px solid #E3EAE7}
+#tb img{width:18px;height:18px;border-radius:4px}
+@media (display-mode: window-controls-overlay){#tb{display:flex}}</style></head>
+<body><div id="tb"><img src="icon-192.png" alt=""><span>نظام إدارة التدريب</span></div><div id="w"><img src="icon-192.png" alt=""><div>جارٍ فتح نظام إدارة التدريب…</div><a href="https://script.google.com/macros/s/AKfycbwX4qcnvTu-56dogF3m4VRhRp6UoXhlkgD5Wibrhd3P2wXGH0J2FTZ2rqGlUrcgCI2c/exec" target="_top">إن لم يفتح النظام خلال دقيقة اضغط هنا</a></div>
 <iframe src="https://script.google.com/macros/s/AKfycbwX4qcnvTu-56dogF3m4VRhRp6UoXhlkgD5Wibrhd3P2wXGH0J2FTZ2rqGlUrcgCI2c/exec" title="نظام إدارة التدريب" allow="clipboard-read; clipboard-write; fullscreen; camera; microphone; geolocation"></iframe>
 <script>if('serviceWorker' in navigator){navigator.serviceWorker.register('sw.js').catch(function(){});}</script>
 </body></html>
